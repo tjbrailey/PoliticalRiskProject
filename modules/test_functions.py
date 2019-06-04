@@ -20,31 +20,37 @@ from tbrailey_final_project_functions import *
 
 
 
-def test_dict_key(dict_key):
+def test_dict_key(dict_key = 'PRSxxCC'):
     '''Tests for dict_key type'''
     
     if not isinstance(dict_key, str):
-        raise TypeError('dict_key should be a string.')
-
+        raise TypeError()
+        
         
         
 def test_prs_code_book_search():
     '''Tests for the prs_code_book function and the prs_code_book'''
     
-    assert type(prs_code_book_search()) == str
+    assert type(prs_code_book_search()) is str
     
-    assert type(prs_code_book) == dict
+    assert type(prs_code_book) is dict
     
+    assert callable (prs_code_book_search())
+       
     
 
 def test_country_info():
     '''Tests for the country_info function'''
     
-    assert type(country_info(my_country)) == pandas.core.frame.DataFrame
-
+    assert type(country_info(my_country = 'Albania')) is pd.core.frame.DataFrame
     
+    assert callable (country_info(my_country = 'Albania'))
+
+
     
 def test_year_info():
     '''Tests for the year_info function'''
     
-    assert type(year_info(my_year, country_sub = country_info(my_country))) == pandas.core.frame.DataFrame
+    assert type(year_info(my_year = '2000', country_sub = country_info(my_country = 'Albania'))) is pd.core.frame.DataFrame
+    
+    assert callable (year_info(my_year = '2000', country_sub = country_info(my_country = 'Albania')))

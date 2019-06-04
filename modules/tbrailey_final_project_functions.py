@@ -50,7 +50,7 @@ prs_code_book = {'Country' : 'The name of each recognized country in the PRS dat
 
 
 
-class color:
+class MyColors:
     '''Allows to print strings with different aesthetics.
     Source: https://stackoverflow.com/questions/8924173/
             how-do-i-print-bold-text-in-python
@@ -101,8 +101,8 @@ def prs_code_book_search():
     else:
         print('It doesn\'t look like that metric is in the dataset.') 
     
-    print(color.bold + color.underline + prs_code_book[dict_key] + 
-         color.reset)
+    print(MyColors.bold + MyColors.underline + prs_code_book[dict_key] + 
+         MyColors.reset)
     
     return dict_key
 
