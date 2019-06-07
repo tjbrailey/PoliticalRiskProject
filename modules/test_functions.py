@@ -34,8 +34,6 @@ def test_prs_code_book_search():
     assert type(prs_code_book_search()) is str
     
     assert type(prs_code_book) is dict
-    
-    assert callable (prs_code_book_search())
        
     
 

@@ -108,6 +108,24 @@ def prs_code_book_search():
 
 
 
+def country_present(prs=prs):
+    '''Returns a tuple of country names in the prs.csv dataset. 
+    
+    Parameters
+    ----------
+    No inputs required. Simply run the function. 
+    
+    Returns
+    -------
+    A tuple pulled from a DataFrame.  
+    '''
+    
+    subset = prs[['Country']]
+    tuples = [tuple(x) for x in subset.values]
+    return tuples
+
+
+
 def country_info(my_country, prs = prs):
     '''Returns the subset of a dataset based on a given row value. 
     
